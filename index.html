@@ -137,6 +137,22 @@
             <div id="listaDatos" class="lista-datos"></div>
         </div>
     </div>
+
+<!-- Agrega esto donde quieras mostrar el enlace al archivo WACZ -->
+<div class="seccion-wacz">
+    <h2>📦 Archivo WACZ</h2>
+    <a href="./archivos/tu-archivo.wacz" class="btn-wacz" download>
+        📥 Descargar Archivo WACZ
+    </a>
+    <p class="link-wacz">Enlace directo: <span id="waczLink">cargando...</span></p>
+</div>
+
+<script>
+// Mostrar el enlace completo del archivo WACZ
+const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/');
+document.getElementById('waczLink').innerHTML = 
+    `<a href="${baseUrl}archivos/skulpt.wacz" target="_blank">${baseUrl}archivos/tu-archivo.wacz</a>`;
+</script>
     
     <script src="script.js"></script>
 </body>
